@@ -1,6 +1,4 @@
 streamlit
 pandas 
 requests
-lotly.graph_objects 
-make_subplots
-islice
+plotly
