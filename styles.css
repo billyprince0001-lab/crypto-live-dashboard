@@ -1,0 +1,62 @@
+/* -------------------------
+   Dark theme full dashboard
+   ------------------------- */
+
+/* Root colors */
+:root{
+  --bg: #0E1117;      /* main background */
+  --card: #111419;    /* card background */
+  --text: #E6EEF8;    /* main text */
+  --muted: #9AA6B2;   /* muted text */
+}
+
+/* App container */
+[data-testid="stAppViewContainer"] {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--text);
+}
+
+/* Remove borders from metrics and cards */
+div[data-testid="stMetric"],
+.stFrame, /* for st.plotly_chart container frames */
+.watchlist-card,
+.stDataFrameWrapper {
+  background-color: var(--card);
+  border: none !important;
+  box-shadow: none !important;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Dataframe text */
+div.stDataFrameWrapper, div[data-testid="stDataFrame"] {
+  color: var(--text);
+}
+
+/* Sparkline container adjust */
+.stPlotlyChart {
+  background: var(--card) !important;
+}
+
+/* Remove hover borders on charts */
+.plotly .main-svg {
+  background: var(--card) !important;
+}
+
+/* Title font if available */
+.title {
+  font-family: PermanentMarker, "Open Sans", sans-serif;
+  color: var(--text);
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .stAppViewContainer {
+    padding: 8px;
+  }
+}
